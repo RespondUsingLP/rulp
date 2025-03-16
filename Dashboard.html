@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGrade AI - Teacher Assistant</title>
+    <link rel="stylesheet" href="Dashboard_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="/api/placeholder/80/80" alt="EduGrade AI Logo">
+                <h1>EduGrade<span>AI</span></h1>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+                <li><a href="#assignments"><i class="fas fa-tasks"></i> <span>Assignments</span></a></li>
+                <li><a href="#students"><i class="fas fa-user-graduate"></i> <span>Students</span></a></li>
+                <li><a href="#feedback"><i class="fas fa-comment-alt"></i> <span>Feedback</span></a></li>
+                <li><a href="#analytics"><i class="fas fa-chart-bar"></i> <span>Analytics</span></a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <img src="/api/placeholder/40/40" alt="User Avatar" class="avatar">
+                    <div class="user-details">
+                        <h4>Ms. Johnson</h4>
+                        <p>English Teacher</p>
+                    </div>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="dark-mode-toggle" class="dark-mode-checkbox">
+                    <label for="dark-mode-toggle" class="dark-mode-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search assignments, students...">
+                </div>
+                <div class="actions">
+                    <div class="language-selector">
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="zh">Chinese</option>
+                        </select>
+                    </div>
+                    <div class="accessibility-controls">
+                        <button class="btn-icon" title="Text to Speech">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button class="btn-icon" title="Speech to Text">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Educator Dashboard Section -->
+            <section id="dashboard" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Educator Dashboard</h2>
+                    <p class="last-update">Last updated: <span id="last-update-time">Today, 10:45 AM</span></p>
+                </div>
+
+                <!-- Overview Cards -->
+                <div class="overview-cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Assignments</h3>
+                            <p class="card-value">124</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Pending Grading</h3>
+                            <p class="card-value">18</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 15%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Graded</h3>
+                            <p class="card-value">106</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Average Score</h3>
+                            <p class="card-value">83%</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 83%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics & Insights -->
+                <div class="analytics-section">
+                    <div class="section-header">
+                        <h3>Analytics & Insights</h3>
+                        <div class="filter-controls">
+                            <select id="chart-filter">
+                                <option value="week">This Week</option>
+                                <option value="month">This Month</option>
+                                <option value="semester">This Semester</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="charts-container">
+                        <div class="chart-card">
+                            <h4>Performance by Assignment</h4>
+                            <canvas id="assignmentChart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h4>Student Progress</h4>
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Assignments -->
+                <div class="recent-assignments">
+                    <div class="section-header">
+                        <h3>Recent Assignments</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="assignment-list">
+                        <div class="assignment-item">
+                            <div class="assignment-info">
+                                <h4>Literary Analysis: Romeo and Juliet</h4>
+                                <p>Due: Mar 12, 2025 | Class: English 101</p>
+                            </div>
+                            <div class="assignment-stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>32 Submissions</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-check"></i>
+                                    <span>28 Graded</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>78% Avg</span>
+                                </div>
+                            </div>
+                            <div class="assignment-actions">
+                                <button class="btn btn-primary">Grade Now</button>
+                            </div>
+                        </div>
+                        <div class="assignment-item">
+                            <div class="assignment-info">
+                                <h4>Poetry Analysis: Emily Dickinson</h4>
+                                <p>Due: Mar 14, 2025 | Class: English 203</p>
+                            </div>
+                            <div class="assignment-stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>27 Submissions</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-check"></i>
+                                    <span>12 Graded</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>85% Avg</span>
+                                </div>
+                            </div>
+                            <div class="assignment-actions">
+                                <button class="btn btn-primary">Grade Now</button>
+                            </div>
+                        </div>
+                        <div class="assignment-item">
+                            <div class="assignment-info">
+                                <h4>Creative Writing: Short Story</h4>
+                                <p>Due: Mar 18, 2025 | Class: English 101</p>
+                            </div>
+                            <div class="assignment-stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>30 Submissions</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-check"></i>
+                                    <span>0 Graded</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>-- Avg</span>
+                                </div>
+                            </div>
+                            <div class="assignment-actions">
+                                <button class="btn btn-primary">Grade Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Adjustment -->
+                <div class="feedback-section">
+                    <div class="section-header">
+                        <h3>Custom Feedback Adjustment</h3>
+                    </div>
+                    <div class="feedback-editor">
+                        <div class="student-submission">
+                            <h4>Student: <span>Emma Thompson</span> | Assignment: <span>Literary Analysis: Romeo and
+                                    Juliet</span></h4>
+                            <div class="submission-content">
+                                <p>The tragedy of Romeo and Juliet explores themes of love, fate, and the consequences
+                                    of impulsive actions. Shakespeare's portrayal of young love demonstrates both its
+                                    beauty and its potential destructiveness when combined with familial hatred...</p>
+                                <a href="#" class="view-full">View Full Submission</a>
+                            </div>
+                        </div>
+                        <div class="ai-feedback">
+                            <h4>AI-Generated Feedback</h4>
+                            <div class="feedback-score">
+                                <div class="score">
+                                    <span class="score-value">92</span>
+                                    <span class="score-label">Score</span>
+                                </div>
+                                <div class="score-breakdown">
+                                    <div class="score-item">
+                                        <span>Content:</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <span>Structure:</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <span>Language:</span>
+                                        <span>92%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-text">
+                                <textarea id="feedback-editor"
+                                    rows="8">Excellent analysis, Emma! Your interpretation of the themes in Romeo and Juliet is insightful. You've effectively connected the concept of impulsive love to the broader consequences in the play. Consider expanding on how Shakespeare uses language devices to emphasize these themes. Your argument about fate could be strengthened with more specific examples from the text. Overall, this is a strong literary analysis that demonstrates a deep understanding of the material.</textarea>
+                                <div class="feedback-controls">
+                                    <button class="btn btn-outline">Reset to AI Feedback</button>
+                                    <button class="btn btn-primary">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Student Portal Section (hidden by default) -->
+            <section id="student-portal" class="student-portal-section hidden">
+                <div class="section-header">
+                    <h2>Student Portal</h2>
+                </div>
+
+                <div class="student-dashboard">
+                    <div class="student-profile">
+                        <img src="/api/placeholder/100/100" alt="Student Avatar" class="student-avatar">
+                        <div class="student-info">
+                            <h3>Emma Thompson</h3>
+                            <p>Student ID: ST-2025-1084</p>
+                            <div class="achievement-badges">
+                                <div class="badge" title="Perfect Attendance">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="badge" title="Writing Excellence">
+                                    <i class="fas fa-pen-fancy"></i>
+                                </div>
+                                <div class="badge" title="Top Performer">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="badge" title="Consistent Improvement">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="performance-summary">
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Current Grade</h3>
+                                <p class="card-value">A-</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Completed</h3>
+                                <p class="card-value">16/20</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Average Score</h3>
+                                <p class="card-value">88%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-cards">
+                        <h3>Recent Feedback</h3>
+                        <div class="feedback-card">
+                            <div class="feedback-header">
+                                <h4>Literary Analysis: Romeo and Juliet</h4>
+                                <h4>Literary Analysis: Romeo and Juliet</h4>
+                                <p class="submission-date">Submitted: Mar 12, 2025</p>
+                            </div>
+                            <div class="feedback-body">
+                                <div class="grade">
+                                    <span class="grade-label">Grade:</span>
+                                    <span class="grade-value">92/100</span>
+                                </div>
+                                <div class="feedback-content">
+                                    <p>Excellent analysis, Emma! Your interpretation of the themes in Romeo and Juliet
+                                        is insightful. You've effectively connected the concept of impulsive love to the
+                                        broader consequences in the play. Consider expanding on how Shakespeare uses
+                                        language devices to emphasize these themes.</p>
+                                </div>
+                                <div class="strength-weakness">
+                                    <div class="strengths">
+                                        <h5>Strengths:</h5>
+                                        <ul>
+                                            <li>Strong theme analysis</li>
+                                            <li>Clear writing style</li>
+                                            <li>Effective use of quotes</li>
+                                        </ul>
+                                    </div>
+                                    <div class="areas-to-improve">
+                                        <h5>Areas to Improve:</h5>
+                                        <ul>
+                                            <li>More textual evidence</li>
+                                            <li>Deeper analysis of literary devices</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-footer">
+                                <button class="btn btn-outline btn-sm">Review Full Feedback</button>
+                            </div>
+                        </div>
+
+                        <div class="feedback-card">
+                            <div class="feedback-header">
+                                <h4>Poetry Analysis: Emily Dickinson</h4>
+                                <p class="submission-date">Submitted: Mar 14, 2025</p>
+                            </div>
+                            <div class="feedback-body">
+                                <div class="grade">
+                                    <span class="grade-label">Grade:</span>
+                                    <span class="grade-value">85/100</span>
+                                </div>
+                                <div class="feedback-content">
+                                    <p>Good job on your poetry analysis! You've shown a clear understanding of
+                                        Dickinson's themes and style. Your interpretation of symbolism is particularly
+                                        strong, though there's room to explore more about the historical context.</p>
+                                </div>
+                                <div class="strength-weakness">
+                                    <div class="strengths">
+                                        <h5>Strengths:</h5>
+                                        <ul>
+                                            <li>Clear understanding of symbolism</li>
+                                            <li>Good analysis of poetic structure</li>
+                                        </ul>
+                                    </div>
+                                    <div class="areas-to-improve">
+                                        <h5>Areas to Improve:</h5>
+                                        <ul>
+                                            <li>Historical context integration</li>
+                                            <li>Deeper analysis of word choice</li>
+                                            <li>More comparative analysis</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-footer">
+                                <button class="btn btn-outline btn-sm">Review Full Feedback</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-suggestions">
+                        <h3>Personalized Learning Suggestions</h3>
+                        <div class="suggestion-cards">
+                            <div class="suggestion-card">
+                                <div class="suggestion-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <h4>Literary Devices Deep Dive</h4>
+                                    <p>Strengthen your analysis by exploring advanced literary devices and their
+                                        application in classic literature.</p>
+                                    <a href="#" class="suggestion-link">View Resource</a>
+                                </div>
+                            </div>
+                            <div class="suggestion-card">
+                                <div class="suggestion-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <h4>Shakespeare's Language Video Series</h4>
+                                    <p>Learn more about how Shakespeare's language choices create meaning and impact in
+                                        his plays.</p>
+                                    <a href="#" class="suggestion-link">Watch Videos</a>
+                                </div>
+                            </div>
+                            <div class="suggestion-card">
+                                <div class="suggestion-icon">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <h4>Guided Writing Practice</h4>
+                                    <p>Improve your analysis skills with guided exercises focused on textual evidence
+                                        integration.</p>
+                                    <a href="#" class="suggestion-link">Start Practice</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-tracker">
+                        <h3>Progress History</h3>
+                        <div class="progress-chart-container">
+                            <canvas id="studentProgressChart"></canvas>
+                        </div>
+                        <div class="progress-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>Feb 15, 2025</h4>
+                                    <p>Essay: American Literature - 78%</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>Feb 28, 2025</h4>
+                                    <p>Analysis: The Great Gatsby - 82%</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>Mar 12, 2025</h4>
+                                    <p>Literary Analysis: Romeo and Juliet - 92%</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>Mar 14, 2025</h4>
+                                    <p>Poetry Analysis: Emily Dickinson - 85%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leaderboard-section">
+                    <h3>Class Leaderboard</h3>
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Student</th>
+                                <th>Assignments</th>
+                                <th>Avg. Score</th>
+                                <th>Achievements</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlighted">
+                                <td>1</td>
+                                <td>
+                                    <div class="student-cell">
+                                        <img src="/api/placeholder/30/30" alt="Avatar" class="mini-avatar">
+                                        <span>Alex Johnson</span>
+                                    </div>
+                                </td>
+                                <td>20/20</td>
+                                <td>94%</td>
+                                <td>
+                                    <div class="mini-badges">
+                                        <i class="fas fa-trophy gold"></i>
+                                        <i class="fas fa-star gold"></i>
+                                        <i class="fas fa-award gold"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <div class="student-cell">
+                                        <img src="/api/placeholder/30/30" alt="Avatar" class="mini-avatar">
+                                        <span>Maya Patel</span>
+                                    </div>
+                                </td>
+                                <td>19/20</td>
+                                <td>93%</td>
+                                <td>
+                                    <div class="mini-badges">
+                                        <i class="fas fa-trophy silver"></i>
+                                        <i class="fas fa-star gold"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="current-user">
+                                <td>3</td>
+                                <td>
+                                    <div class="student-cell">
+                                        <img src="/api/placeholder/30/30" alt="Avatar" class="mini-avatar">
+                                        <span>Emma Thompson</span>
+                                    </div>
+                                </td>
+                                <td>16/20</td>
+                                <td>88%</td>
+                                <td>
+                                    <div class="mini-badges">
+                                        <i class="fas fa-trophy bronze"></i>
+                                        <i class="fas fa-pen-fancy silver"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <div class="student-cell">
+                                        <img src="/api/placeholder/30/30" alt="Avatar" class="mini-avatar">
+                                        <span>James Wilson</span>
+                                    </div>
+                                </td>
+                                <td>18/20</td>
+                                <td>85%</td>
+                                <td>
+                                    <div class="mini-badges">
+                                        <i class="fas fa-chart-line silver"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <div class="student-cell">
+                                        <img src="/api/placeholder/30/30" alt="Avatar" class="mini-avatar">
+                                        <span>Sophia Lee</span>
+                                    </div>
+                                </td>
+                                <td>17/20</td>
+                                <td>84%</td>
+                                <td>
+                                    <div class="mini-badges">
+                                        <i class="fas fa-book bronze"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- AI Chatbot Widget -->
+        <div class="chat-widget" id="chat-widget">
+            <div class="chat-header" id="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <h3>EduAssist AI</h3>
+                </div>
+                <div class="chat-actions">
+                    <button class="btn-icon" id="minimize-chat">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot">
+                        <div class="message-content">
+                            <p>Hi there! I'm your EduAssist AI. How can I help you today?</p>
+                        </div>
+                        <div class="message-time">10:30 AM</div>
+                    </div>
+                    <div class="message user">
+                        <div class="message-content">
+                            <p>How do I give feedback on an assignment?</p>
+                        </div>
+                        <div class="message-time">10:31 AM</div>
+                    </div>
+                    <div class="message bot">
+                        <div class="message-content">
+                            <p>To provide feedback, go to the Assignments section, select the assignment you want to
+                                grade, and click "Grade Now". You can review the AI-generated feedback and make any
+                                adjustments before saving.</p>
+                        </div>
+                        <div class="message-time">10:31 AM</div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input-field" placeholder="Type your question here...">
+                    <button class="btn-icon" id="send-message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <button class="btn-icon" id="voice-input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="Dashboard_script.js"></script>
+</body>
+
+</html>

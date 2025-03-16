@@ -1,0 +1,680 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RULP | Empowering Educators</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <span>RULP </span><span class="accent">Teacher Assistant</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#testimonials">Testimonials</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html"><button class="login-btn">Log In</button></a>
+                <a href="signup.html"><button class="signup-btn">Sign Up</button></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Testimonials</a>
+        <div class="mobile-auth">
+            <button class="login-btn">Log In</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Empower Your Teaching with <span class="accent">AI</span></h1>
+                <p>Automated grading and personalized feedback for every student, giving you more time to inspire.</p>
+                <div class="cta-buttons">
+                    <button class="get-started">Get Started</button>
+                    <button class="watch-demo"><i class="fas fa-play"></i> Watch Demo</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-elements">
+                    <div class="element element-1"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="element element-2"><i class="fas fa-book"></i></div>
+                    <div class="element element-3"><i class="fas fa-chart-line"></i></div>
+                    <div class="element element-4"><i class="fas fa-comments"></i></div>
+                </div>
+                <img src="/api/placeholder/600/400" alt="Teacher using TeachSmart AI">
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Powerful <span class="accent">Features</span></h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Automated Grading</h3>
+                    <p>Save hours of manual grading with our AI-powered system that accurately assesses student work.
+                    </p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Personalized Feedback</h3>
+                    <p>Provide tailored feedback to each student, addressing their specific strengths and areas for
+                        improvement.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor student progress over time with comprehensive analytics and insights.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time-Saving</h3>
+                    <p>Reclaim your time for more meaningful teaching activities and one-on-one student mentoring.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="problem-solution">
+            <div class="problem-content">
+                <h2>The <span class="accent">Challenge</span></h2>
+                <div class="problem-card">
+                    <h3>Overburdened Teachers</h3>
+                    <p>Teachers struggle with heavy workloads, especially when providing individualized feedback to
+                        large classrooms.</p>
+                    <div class="problem-stats">
+                        <div class="stat">
+                            <h4>40+</h4>
+                            <p>Hours spent grading per month</p>
+                        </div>
+                        <div class="stat">
+                            <h4>30:1</h4>
+                            <p>Average student-to-teacher ratio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="solution-content">
+                <h2>Our <span class="accent">Solution</span></h2>
+                <div class="solution-card">
+                    <h3>AI-Powered Assistance</h3>
+                    <p>RULP automates repetitive grading tasks while providing personalized feedback, aligning
+                        with UN SDG 4: Quality Education.</p>
+                    <div class="solution-stats">
+                        <div class="stat">
+                            <h4>80%</h4>
+                            <p>Reduction in grading time</p>
+                        </div>
+                        <div class="stat">
+                            <h4>3x</h4>
+                            <p>More personalized feedback</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <h2>How <span class="accent">It Works</span></h2>
+            <div class="steps">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Upload Assignments</h3>
+                        <p>Teachers upload student assignments through our intuitive interface.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Analysis</h3>
+                        <p>Our advanced AI analyzes each submission based on customizable criteria.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="400">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Comprehensive Feedback</h3>
+                        <p>The system generates detailed feedback and suggestions for each student.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="600">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Teacher Review</h3>
+                        <p>Teachers can review, modify, and approve the AI-generated feedback before sending it to
+                            students.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>What <span class="accent">Educators Say</span></h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="quote">"RULP has transformed my teaching approach. I now have more time to
+                            focus on student engagement rather than spending hours on grading."</div>
+                        <div class="author">
+                            <div class="author-image">
+                                <img src="/api/placeholder/60/60" alt="Sarah Johnson">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>High School English Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="quote">"The personalized feedback my students receive has significantly improved
+                            their writing skills. This tool is indispensable for large university classes."</div>
+                        <div class="author">
+                            <div class="author-image">
+                                <img src="/api/placeholder/60/60" alt="Dr. Michael Chen">
+                            </div>
+                            <div class="author-info">
+                                <h4>Dr. Michael Chen</h4>
+                                <p>University Professor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="quote">"In our under-resourced school, TeachSmart AI has been a game-changer. It's
+                            like having an additional teaching assistant in the classroom."</div>
+                        <div class="author">
+                            <div class="author-image">
+                                <img src="/api/placeholder/60/60" alt="Robert Ndlovu">
+                            </div>
+                            <div class="author-info">
+                                <h4>Robert Ndlovu</h4>
+                                <p>Middle School Science Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Teaching Experience?</h2>
+                <p>Join thousands of educators who have reclaimed their time and enhanced their students' learning.</p>
+                <button class="cta-btn">Start Free Trial</button>
+            </div>
+            <div class="cta-image">
+                <img src="/api/placeholder/500/300" alt="Happy teacher with students">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span>TeachSmart</span><span class="accent">AI</span>
+                </div>
+                <p class="tagline">Empowering educators with AI-powered solutions.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 TeachSmartAI. All rights reserved.</p>
+            <p>Made with ❤️ for educators worldwide</p>
+        </div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachSmart AI | Empowering Educators</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <span>TeachSmart</span><span class="accent">AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html"><button class="login-btn">Log In</button></a>
+                <a href="signup.html"><button class="signup-btn">Sign Up</button></a>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <div class="mobile-auth">
+            <a href="login.html"><button class="login-btn">Log In</button></a>
+            <a href="signup.html"><button class="signup-btn">Sign Up</button></a>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="reveal-text">Empower Your Teaching with <span class="accent">AI</span></h1>
+                <p class="reveal-text">Automated grading and personalized feedback for every student, giving you more
+                    time to inspire.</p>
+                <div class="cta-buttons">
+                    <button class="get-started">Get Started</button>
+                    <button class="watch-demo"><i class="fas fa-play"></i> Watch Demo</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="teacher_img.jpg" alt="Teacher using RULP Teacher Assistant">
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2 class="section-title">Powerful <span class="accent">Features</span></h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Automated Grading</h3>
+                    <p>Save hours of manual grading with our AI-powered system that accurately assesses student work.
+                    </p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Personalized Feedback</h3>
+                    <p>Provide tailored feedback to each student, addressing their specific strengths and areas for
+                        improvement.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor student progress over time with comprehensive analytics and insights.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time-Saving</h3>
+                    <p>Reclaim your time for more meaningful teaching activities and one-on-one student mentoring.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="problem-solution">
+            <div class="problem-content" data-aos="fade-right">
+                <h2 class="section-title">The <span class="accent">Challenge</span></h2>
+                <div class="problem-card">
+                    <h3>Overburdened Teachers</h3>
+                    <p>Teachers struggle with heavy workloads, especially when providing individualized feedback to
+                        large classrooms.</p>
+                    <div class="problem-stats">
+                        <div class="stat">
+                            <h4 class="count" data-count="40">0</h4>
+                            <p>Hours spent grading per month</p>
+                        </div>
+                        <div class="stat">
+                            <h4 class="count-ratio" data-count="30">0</h4>
+                            <p>Average student-to-teacher ratio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="solution-content" data-aos="fade-left">
+                <h2 class="section-title">Our <span class="accent">Solution</span></h2>
+                <div class="solution-card">
+                    <h3>AI-Powered Assistance</h3>
+                    <p>TeachSmart AI automates repetitive grading tasks while providing personalized feedback, aligning
+                        with UN SDG 4: Quality Education.</p>
+                    <div class="solution-stats">
+                        <div class="stat">
+                            <h4 class="count" data-count="80">0</h4>
+                            <p>Reduction in grading time</p>
+                        </div>
+                        <div class="stat">
+                            <h4 class="count-ratio" data-count="3">0</h4>
+                            <p>More personalized feedback</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <h2 class="section-title">How <span class="accent">It Works</span></h2>
+            <div class="steps">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Upload Assignments</h3>
+                        <p>Teachers upload student assignments through our intuitive interface.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Analysis</h3>
+                        <p>Our advanced AI analyzes each submission based on customizable criteria.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="400">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Comprehensive Feedback</h3>
+                        <p>The system generates detailed feedback and suggestions for each student.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="600">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Teacher Review</h3>
+                        <p>Teachers can review, modify, and approve the AI-generated feedback before sending it to
+                            students.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2 class="section-title">What <span class="accent">Educators Say</span></h2>
+            <div class="testimonial-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="quote">"TeachSmart AI has transformed my teaching approach. I now have more time
+                                to focus on student engagement rather than spending hours on grading."</div>
+                            <div class="author">
+                                <div class="author-image">
+                                    <img src="/api/placeholder/60/60" alt="Sarah Johnson">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>High School English Teacher</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote">"The personalized feedback my students receive has significantly improved
+                                their writing skills. This tool is indispensable for large university classes."</div>
+                            <div class="author">
+                                <div class="author-image">
+                                    <img src="/api/placeholder/60/60" alt="Dr. Michael Chen">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Dr. Michael Chen</h4>
+                                    <p>University Professor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote">"In our under-resourced school, TeachSmart AI has been a game-changer.
+                                It's like having an additional teaching assistant in the classroom."</div>
+                            <div class="author">
+                                <div class="author-image">
+                                    <img src="/api/placeholder/60/60" alt="Robert Ndlovu">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Robert Ndlovu</h4>
+                                    <p>Middle School Science Teacher</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-btn" aria-label="Previous testimonial"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Transform Your Teaching Experience?</h2>
+                <p>Join thousands of educators who have reclaimed their time and enhanced their students' learning.</p>
+                <button class="cta-btn pulse">Start Free Trial</button>
+            </div>
+            <div class="cta-image" data-aos="fade-up" data-aos-delay="200">
+                <img src="/api/placeholder/500/300" alt="Happy teacher with students">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get in <span class="accent">Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Education Lane, Learning City, 10001</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@teachsmartai.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject">
+                            <option value="" disabled selected>Select Subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="demo">Request Demo</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span>TeachSmart</span><span class="accent">AI</span>
+                </div>
+                <p class="tagline">Empowering educators with AI-powered solutions.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 TeachSmartAI. All rights reserved.</p>
+            <p>Made with ❤️ for educators worldwide</p>
+        </div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+
+</html>
