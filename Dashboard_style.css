@@ -308,7 +308,6 @@ body {
 }
 
 .notifications {
-    position: relative;
     cursor: pointer;
 }
 
@@ -711,7 +710,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--primary-light);
+    background-color: var(--primary-light),0.75;
     color: var(--primary-color);
     display: flex;
     align-items: center;
